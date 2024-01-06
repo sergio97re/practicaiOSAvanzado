@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeroDetailViewController" id="Y6W-OH-hqX" customClass="HeroDetailViewController" customModule="PracticaFinaliOSAvanzado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOz-H2-ysr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZOz-H2-ysr" secondAttribute="height" multiplier="393:382" id="amk-if-oIz"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Okg-d8-kX4">
+                                <rect key="frame" x="273" y="278" width="104" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="2KX-vU-r4o"/>
+                                    <constraint firstAttribute="width" secondItem="Okg-d8-kX4" secondAttribute="height" multiplier="1:1" id="fyW-26-at3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-oH-Lmn">
+                                <rect key="frame" x="16" y="402" width="361" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="L7q-lE-TXM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.39937481619999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7T-OK-YAs">
+                                <rect key="frame" x="16" y="443" width="361" height="355"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pv-rX-tfl">
+                                <rect key="frame" x="16.000000000000007" y="50" width="96.666666666666686" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Volver" cornerStyle="dynamic">
+                                    <imageReference key="image" image="chevron.left.square.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                        <color key="backgroundColor" red="0.98513945438326511" green="1" blue="0.96664238634653399" alpha="0.64216624149659862" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" red="1" green="0.61206845288208012" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBackPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="68U-rL-A6c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="V7T-OK-YAs" secondAttribute="trailing" constant="16" id="4oL-k3-LjA"/>
+                            <constraint firstItem="ZOz-H2-ysr" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6wR-gh-eX6"/>
+                            <constraint firstItem="jFe-oH-Lmn" firstAttribute="top" secondItem="ZOz-H2-ysr" secondAttribute="bottom" constant="20" id="Beu-nT-nQx"/>
+                            <constraint firstItem="jFe-oH-Lmn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="IUi-YJ-qLR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jFe-oH-Lmn" secondAttribute="trailing" constant="16" id="LNV-Lk-pCC"/>
+                            <constraint firstItem="2pv-rX-tfl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="SX3-8S-dv9"/>
+                            <constraint firstItem="2pv-rX-tfl" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="50" id="b0r-sh-TaO"/>
+                            <constraint firstItem="V7T-OK-YAs" firstAttribute="top" secondItem="jFe-oH-Lmn" secondAttribute="bottom" constant="20" id="bXK-Ba-RR9"/>
+                            <constraint firstItem="Okg-d8-kX4" firstAttribute="bottom" secondItem="ZOz-H2-ysr" secondAttribute="bottom" id="eLs-KU-xZ2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="V7T-OK-YAs" secondAttribute="bottom" constant="20" id="eyz-df-csR"/>
+                            <constraint firstItem="ZOz-H2-ysr" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="laL-JN-S32"/>
+                            <constraint firstItem="V7T-OK-YAs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="pt7-XS-sRb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Okg-d8-kX4" secondAttribute="trailing" constant="16" id="sWU-vY-x9i"/>
+                            <constraint firstItem="ZOz-H2-ysr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vxu-Zp-ZcR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroDescription" destination="V7T-OK-YAs" id="Rtw-3F-UPQ"/>
+                        <outlet property="mapView" destination="ZOz-H2-ysr" id="MCB-FK-o3g"/>
+                        <outlet property="name" destination="jFe-oH-Lmn" id="mPs-rf-5dN"/>
+                        <outlet property="photo" destination="Okg-d8-kX4" id="Adt-vk-kkN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
