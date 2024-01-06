@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heroes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeroesViewController" id="Y6W-OH-hqX" customClass="HeroesViewController" customModule="PracticaFinaliOSAvanzado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jgw-2K-wmF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-9D-FCy">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-wm-ar7">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="color" systemColor="systemPinkColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.7495983974" blue="0.81467281160000005" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Afj-wm-ar7" firstAttribute="centerX" secondItem="OLS-9D-FCy" secondAttribute="centerX" id="SWn-Sx-k4n"/>
+                                    <constraint firstItem="Afj-wm-ar7" firstAttribute="centerY" secondItem="OLS-9D-FCy" secondAttribute="centerY" id="Ze8-6H-8xn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OLS-9D-FCy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8Qa-wR-gBP"/>
+                            <constraint firstItem="OLS-9D-FCy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="HnR-n6-ofe"/>
+                            <constraint firstItem="OLS-9D-FCy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Kj7-Zm-WHV"/>
+                            <constraint firstAttribute="bottom" secondItem="OLS-9D-FCy" secondAttribute="bottom" id="YlE-or-mSv"/>
+                            <constraint firstItem="Jgw-2K-wmF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cwY-ja-9Sl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jgw-2K-wmF" secondAttribute="trailing" id="l7G-wc-0q0"/>
+                            <constraint firstItem="Jgw-2K-wmF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pIg-iP-q6D"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Jgw-2K-wmF" secondAttribute="bottom" id="z1T-EC-WaB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="OLS-9D-FCy" id="SuX-TO-9gK"/>
+                        <outlet property="tableView" destination="Jgw-2K-wmF" id="IFk-hv-wiC"/>
+                        <segue destination="8iE-tM-x3H" kind="show" identifier="Heroes_to_HeroDetail" id="Ggm-gH-Q5w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+        <!--HeroDetail-->
+        <scene sceneID="KPy-xg-Vmh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroDetail" id="8iE-tM-x3H" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3AY-Vf-I0q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiZ-gS-AQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
